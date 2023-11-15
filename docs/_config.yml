@@ -1,0 +1,17 @@
+title: TLW-notes
+author:
+  name: KevinM
+
+description: "Notes di Tecnologie e Linguaggi Web"
+
+# Build settings
+plugins:
+  - jekyll-remote-theme
+
+# set up remote_theme
+remote_theme: jekyll/minima
+
+minima:
+  skin: auto
+  social_links:
+    - { platform: github, user_url: "https://github.com/kevinm6" }
