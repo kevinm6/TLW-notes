@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<title>README</title>
+		<style>
+			/* PDF Specific */
+
+@media print {
+  body {
+    min-width: initial;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* General */
+
+.octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.anchor:focus {
+  outline: none;
+}
+
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+  text-decoration: none;
+}
+
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+h1:hover .anchor .octicon-link:before,
+h2:hover .anchor .octicon-link:before,
+h3:hover .anchor .octicon-link:before,
+h4:hover .anchor .octicon-link:before,
+h5:hover .anchor .octicon-link:before,
+h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-print-color-adjust: exact;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #24292e;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 1rem auto;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+a {
+  background-color: initial;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+img {
+  border-style: none;
+}
+
+code,
+kbd,
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+input {
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  overflow: visible;
+}
+
+[type='checkbox'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: 600;
+}
+
+hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+hr:after,
+hr:before {
+  display: table;
+  content: '';
+}
+
+hr:after {
+  clear: both;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h5,
+h6 {
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+blockquote {
+  margin: 0;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol ol,
+ul ol {
+  list-style-type: lower-roman;
+}
+
+ol ol ol,
+ol ul ol,
+ul ol ol,
+ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+dd {
+  margin-left: 0;
+}
+
+code,
+pre {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 12px;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+:checked + .radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.border {
+  border: 1px solid #e1e4e8 !important;
+}
+
+.border-0 {
+  border: 0 !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e1e4e8 !important;
+}
+
+.rounded-1 {
+  border-radius: 3px !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.bg-gray-light {
+  background-color: #fafbfc !important;
+}
+
+.text-gray-light {
+  color: #6a737d !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.my-2 {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.pl-1 {
+  padding-left: 4px !important;
+}
+
+.pl-2 {
+  padding-left: 8px !important;
+}
+
+.py-2 {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.pl-3,
+.px-3 {
+  padding-left: 16px !important;
+}
+
+.px-3 {
+  padding-right: 16px !important;
+}
+
+.pl-4 {
+  padding-left: 24px !important;
+}
+
+.pl-5 {
+  padding-left: 32px !important;
+}
+
+.pl-6 {
+  padding-left: 40px !important;
+}
+
+.f6 {
+  font-size: 12px !important;
+}
+
+.lh-condensed {
+  line-height: 1.25 !important;
+}
+
+.text-bold {
+  font-weight: 600 !important;
+}
+
+.pl-c {
+  color: #6a737d;
+}
+
+.pl-c1,
+.pl-s .pl-v {
+  color: #005cc5;
+}
+
+.pl-e,
+.pl-en {
+  color: #6f42c1;
+}
+
+.pl-s .pl-s1,
+.pl-smi {
+  color: #24292e;
+}
+
+.pl-ent {
+  color: #22863a;
+}
+
+.pl-k {
+  color: #d73a49;
+}
+
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.pl-smw,
+.pl-v {
+  color: #e36209;
+}
+
+.pl-bu {
+  color: #b31d28;
+}
+
+.pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.pl-c2:before {
+  content: '^M';
+}
+
+.pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.pl-ml {
+  color: #735c0f;
+}
+
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.pl-ba {
+  color: #586069;
+}
+
+.pl-sg {
+  color: #959da5;
+}
+
+.pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.my-2 {
+  margin-bottom: 8px !important;
+}
+
+.my-2 {
+  margin-top: 8px !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.pl-1 {
+  padding-left: 4px !important;
+}
+
+.pl-2 {
+  padding-left: 8px !important;
+}
+
+.py-2 {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.pl-3 {
+  padding-left: 16px !important;
+}
+
+.pl-4 {
+  padding-left: 24px !important;
+}
+
+.pl-5 {
+  padding-left: 32px !important;
+}
+
+.pl-6 {
+  padding-left: 40px !important;
+}
+
+.pl-7 {
+  padding-left: 48px !important;
+}
+
+.pl-8 {
+  padding-left: 64px !important;
+}
+
+.pl-9 {
+  padding-left: 80px !important;
+}
+
+.pl-10 {
+  padding-left: 96px !important;
+}
+
+.pl-11 {
+  padding-left: 112px !important;
+}
+
+.pl-12 {
+  padding-left: 128px !important;
+}
+
+hr {
+  border-bottom-color: #eee;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+body:after,
+body:before {
+  display: table;
+  content: '';
+}
+
+body:after {
+  clear: both;
+}
+
+body > :first-child {
+  margin-top: 0 !important;
+}
+
+body > :last-child {
+  margin-bottom: 0 !important;
+}
+
+a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+blockquote,
+details,
+dl,
+ol,
+p,
+pre,
+table,
+ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h1,
+h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.875em;
+}
+
+h6 {
+  font-size: 0.85em;
+  color: #6a737d;
+}
+
+ol,
+ul {
+  padding-left: 2em;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li {
+  word-wrap: break-all;
+}
+
+li > p {
+  margin-top: 16px;
+}
+
+li + li {
+  margin-top: 0.25em;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+table th {
+  font-weight: 600;
+}
+
+table td,
+table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+img {
+  max-width: 80%;
+  box-sizing: initial;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+}
+
+pre {
+  word-wrap: normal;
+}
+
+pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  -webkit-print-color-adjust: exact;
+  background: #f8f8f8;
+}
+
+.hljs pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.hljs pre,
+pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  -webkit-print-color-adjust: exact;
+
+  border-radius: 3px;
+}
+
+pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27, 31, 35, 0.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.blob-num:hover {
+  color: rgba(27, 31, 35, 0.6);
+}
+
+.blob-num:before {
+  content: attr(data-line-number);
+}
+
+.blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.pl-token.active,
+.pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.tab-size[data-tab-size='1'] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.tab-size[data-tab-size='2'] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.tab-size[data-tab-size='3'] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.tab-size[data-tab-size='4'] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.tab-size[data-tab-size='5'] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.tab-size[data-tab-size='6'] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.tab-size[data-tab-size='7'] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.tab-size[data-tab-size='8'] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.tab-size[data-tab-size='9'] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.tab-size[data-tab-size='10'] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.tab-size[data-tab-size='11'] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.tab-size[data-tab-size='12'] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.task-list-item {
+  list-style-type: none;
+}
+
+.task-list-item + .task-list-item {
+  margin-top: 3px;
+}
+
+.task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+/*
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+*/
+  
+  .hljs-comment,
+  .hljs-quote {
+    color: #998;
+    font-style: italic;
+  }
+  
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .hljs-number,
+  .hljs-literal,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag .hljs-attr {
+    color: #008080;
+  }
+  
+  .hljs-string,
+  .hljs-doctag {
+    color: #d14;
+  }
+  
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-id {
+    color: #900;
+    font-weight: bold;
+  }
+  
+  .hljs-subst {
+    font-weight: normal;
+  }
+  
+  .hljs-type,
+  .hljs-class .hljs-title {
+    color: #458;
+    font-weight: bold;
+  }
+  
+  .hljs-tag,
+  .hljs-name,
+  .hljs-attribute {
+    color: #000080;
+    font-weight: normal;
+  }
+  
+  .hljs-regexp,
+  .hljs-link {
+    color: #009926;
+  }
+  
+  .hljs-symbol,
+  .hljs-bullet {
+    color: #990073;
+  }
+  
+  .hljs-built_in,
+  .hljs-builtin-name {
+    color: #0086b3;
+  }
+  
+  .hljs-meta {
+    color: #999;
+    font-weight: bold;
+  }
+  
+  .hljs-deletion {
+    background: #fdd;
+  }
+  
+  .hljs-addition {
+    background: #dfd;
+  }
+  
+  .hljs-emphasis {
+    font-style: italic;
+  }
+  
+  .hljs-strong {
+    font-weight: bold;
+  }
+		</style>
+	</head>
+	<body>
+		<nav id="table-of-contents">
+			
+		</nav>
+		<main>
+			<p style="text-align:right; color:#909090">
+<a href="https://github.com/kevinm6/TLW-notes/issues/new?labels=bug&amp;title=New+bug+or+request" style="text-align:right; right:-1; color:#909090;">Bug | Request
+   </a>
+</p>
+<h1 style="text-align: center;">Tecnologie &amp; Linguaggi Web</h1>
+<p style="text-align:right; color:#909090"><small>Last Update : 13/11/2023</small></p>
+<!--toc:start-->
+<ul>
+<li><a href="#responsive-web-design">Responsive Web Design</a></li>
+<li><a href="#html">HTML</a>
+<ul>
+<li><a href="#tags">Tags</a>
+<ul>
+<li><a href="#tag-div">Tag <code>&lt;div&gt;</code></a></li>
+</ul>
+</li>
+<li><a href="#browser">Browser</a></li>
+</ul>
+</li>
+<li><a href="#xhtml">XHTML</a></li>
+<li><a href="#css">CSS</a></li>
+<li><a href="#bootstrap">Bootstrap</a></li>
+<li><a href="#xml">XML</a></li>
+<li><a href="#json">JSON</a></li>
+<li><a href="#json-vs-xml">JSON Vs XML</a></li>
+<li><a href="#rest">REST</a></li>
+<li><a href="#javascript">JavaScript</a>
+<ul>
+<li><a href="#variabili-e-scope">Variabili e Scope</a></li>
+<li><a href="#dom">DOM</a>
+<ul>
+<li><a href="#html-dom">HTML DOM</a></li>
+</ul>
+</li>
+<li><a href="#eventi">Eventi</a></li>
+<li><a href="#promises">Promises</a></li>
+<li><a href="#fetch">Fetch</a></li>
+</ul>
+</li>
+<li><a href="#nodejs">NodeJS</a>
+<ul>
+<li><a href="#npm">NPM</a></li>
+</ul>
+</li>
+<li><a href="#swaggerjs">SwaggerJS</a></li>
+<li><a href="#mongodb">MongoDB</a></li>
+<li><a href="#downloads">Downloads</a></li>
+</ul>
+<!--toc:end-->
+<h2 id="responsive-web-design" tabindex="-1"><a class="anchor" href="#responsive-web-design" aria-hidden="true"><span class="octicon octicon-link"></span></a> Responsive Web Design</h2>
+<p>Il responsive web design riguarda la creazione di siti web che si adattano automaticamente<br>
+per avere un aspetto adatto a seconda del dispositivo in cui vengono visualizzati, dai piccoli telefoni ai desktop di grandi dimensioni.</p>
+<h2 id="html" tabindex="-1"><a class="anchor" href="#html" aria-hidden="true"><span class="octicon octicon-link"></span></a> HTML</h2>
+<p>→ <a href="https://learnxinyminutes.com/docs/html/">Sintassi HTML</a> ←</p>
+<p><strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>an
+Viene usato per la creazione delle pagine Web</p>
+<ul>
+<li>È uno <strong>standard</strong> per la rappresentazione</li>
+<li>Descrive la <strong>struttura della pagina</strong></li>
+<li><strong>Linguaggio di markup</strong> (basato sui <strong>tag</strong>), ossia un linguaggio per strutturare e marcare
+i documenti in maniera indipendente dall’applicazione, modellato per
+rendere esplicita una particolare interpretazione di un testo.</li>
+<li>Descrive <strong>dati</strong> e <strong>regole</strong> su come mostrare i dati</li>
+<li>Ha poche e semplici regole sintattiche</li>
+<li>Non ha nessun meccanismo di decisione o iterazione (linguaggio di markup e non di programmazione)</li>
+</ul>
+<blockquote>
+<p>La struttura dei documenti HTML è divisa in due parti: testa (<strong>head</strong>) e corpo (<strong>body</strong>)</p>
+</blockquote>
+<p><strong>Scheletro Pagina HTML</strong></p>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"it"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h4 id="tags" tabindex="-1"><a class="anchor" href="#tags" aria-hidden="true"><span class="octicon octicon-link"></span></a> Tags</h4>
+<p>La struttura delle pagine web è definita attraverso dei <strong>tag</strong> ossia
+dei marcatori che identificano porzioni di testo, e personalizzano la
+pagina.<br>
+Tutto il codice contenuto all interno del tag <code>&lt;html&gt;</code> è codice html.<br>
+Lo <strong>head</strong> contiene informazioni/metadati relativi al documento (non immediati), ad
+esempio descrive come il documento deve essere letto e interpretato ed eventualmente il titolo
+Il <strong>body</strong> contiene il documento vero e proprio, presentando il
+contenuto in diversi modi sia testo ma anche immagini, video, audio.<br>
+Il tag <strong>div</strong> che è un blocco contenitore generico, fornisce un vero e
+proprio elemento strutturale della pagina, perchè suddivide gli spazi
+della pagina in zone in modo seplice e dettagliato.<br>
+Altri tag es img, table, ul/li, ol, li, form, input, a, select/option.</p>
+<p>Esempio di tag: <code>&lt;nome_tag attributi&gt;contenuto&lt;/nome_tag&gt;</code></p>
+<h5 id="tag-div" tabindex="-1"><a class="anchor" href="#tag-div" aria-hidden="true"><span class="octicon octicon-link"></span></a> Tag <code>&lt;div&gt;</code></h5>
+<p>Un <strong>tag</strong> molto utilizzato è <code>&lt;div&gt;</code> che rappresenta un blocco che funziona da contenitore.
+È utile sopratutto nella creazione del layout della pagina in quanto ne permette di definire la
+struttura.<br>
+Suddivide gli spazi in zone per progettare il sito in modo semplice e dettagliato</p>
+<p><strong>Esempio di struttura con <em>tag div</em></strong></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"container"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"navigation"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-comment">&lt;!--#navigation--&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-comment">&lt;!--#header--&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-comment">&lt;!--#main--&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sidebar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-comment">&lt;!--#sidebar--&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"footer"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-comment">&lt;!--#footer--&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-comment">&lt;!--#container--&gt;</span>
+</code></pre>
+<p>Un tratto che ha reso HTML popolare sono gli ipertesti (o <strong>link</strong>), ovvero un collegamento tra un
+testo e un altro.<br>
+I <strong>link</strong> sono formati da due componenti: contenuto e risorsa a cui si riferiscono.<br>
+Esempio e sintassi dei <em>link</em>: <code>&lt;a href="remote_or_local_address"&gt;Testo&lt;/a&gt;</code><br>
+La risorsa a cui i link fanno riferimento possono essere: immagini, documenti, altre pagine HTML,
+file, e-mail, numeri ecc... (è possibile utilizzare anche il <em>relative path</em>)</p>
+<blockquote>
+<p>I <strong>Commenti</strong> in HTML → <code>&lt;!-- commento --&gt;</code><br>
+<strong>HTML</strong> è <strong>case unsensitive</strong> → <code>&lt;HEAD&gt;&lt;/HEAD&gt;</code> == <code>&lt;head&gt;&lt;/head&gt;</code><br>
+<strong>XHTML</strong> è <strong>case sensitive</strong> → <code>&lt;HEAD&gt;&lt;/HEAD&gt;</code> != <code>&lt;head&gt;&lt;/head&gt;</code><br>
+È comunque consigliabile utilizzare il carattere minuscolo</p>
+</blockquote>
+<hr>
+<h3 id="browser" tabindex="-1"><a class="anchor" href="#browser" aria-hidden="true"><span class="octicon octicon-link"></span></a> Browser</h3>
+<p>Un <strong>browser</strong> interpreta e legge i documenti HTML, e serve per la
+navigazione web, infatti esso richiede risorse attraverso il web e le
+mostra nella finestra.<br>
+Inoltre contiene alcuni <strong>tool per gli sviluppatori</strong> per esempio il
+debug della pagina, analisi di sorgenti e stili, accesso allo storage e
+cookie e molto altro, alcuni browser famosi sono: <em>Chrome</em>, <em>Firefox</em>,
+<em>Opera</em>, <em>Safari</em>.</p>
+<p>Composizione del Browser:</p>
+<ul>
+<li>
+<p><strong>Layout Engine</strong><br>
+<small>riceve input dal browser (<em>Url bar</em>, <em>search box</em>, <em>mouse clicks</em> e <em>key presses</em>) e li passa al rendering engine</small></p>
+</li>
+<li>
+<p><strong>Rendering Engine</strong><br>
+<small>riceve il codice HTML e lo interpreta mostrandolo a video</small></p>
+</li>
+<li>
+<p><strong>User Interface</strong><br>
+<small>controlli del browser, ad esempio pulsanti per andare avanti/indietro, bookmarks ecc..</small></p>
+</li>
+<li>
+<p><strong>JavaScript Engine</strong><br>
+<small>engine che effettua il parse ed esegue il codice JavaScript per poi restituirne il
+risultato</small></p>
+</li>
+<li>
+<p><strong>Network Layer</strong><br>
+<small>gestisce le funzioni di rete: <em>criptazione</em>, <em>richieste http</em> e le varie
+configurazioni...</small></p>
+</li>
+<li>
+<p><strong>Storage</strong><br>
+<small>porzione di memoria dove il browser memorizza <em>cached file</em>, <em>cookie</em> e oggetti creati con JavaScript</small></p>
+</li>
+<li>
+<p><strong>Operating System Interface</strong><br>
+<small>componente che interagisce con il Sistema Operativo per disegnare i diversi e elemnti e gestire la
+finestra</small></p>
+</li>
+</ul>
+<hr>
+<h2 id="xhtml" tabindex="-1"><a class="anchor" href="#xhtml" aria-hidden="true"><span class="octicon octicon-link"></span></a> XHTML</h2>
+<p>E<strong>X</strong>tensible <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</p>
+<p>Linguaggio di markup quasi identico a html, ma più stringente,
+supportato dai principali browser, motivo per cui si usa è che molte
+pagine web contengono html errato, dove per interpretare codice
+sbagliato richiede maggiori risorse o potenza computazionale, quindi è
+un <strong>linguaggio di markup corretto</strong> dove i documenti devono essere ben
+formati (es tag sempre chiusi, innestati correttamente).</p>
+<p><strong>Come converto un file html in x-html?</strong></p>
+<ul>
+<li>aggiungendo un XHTML <code>&lt;!DOCTYPE&gt;</code>; nella prima linea di ogni pagina,</li>
+<li>aggiungendo l'attributo xmlns all'elemento html <code>&lt;html xmlns="http://*.w3.org/*/xhtml"&gt;&lt;/html&gt;</code></li>
+<li>cambiando tutti i nomi di elemento in minuscolo etc…</li>
+</ul>
+<hr>
+<h2 id="css" tabindex="-1"><a class="anchor" href="#css" aria-hidden="true"><span class="octicon octicon-link"></span></a> CSS</h2>
+<p>→ <a href="https://learnxinyminutes.com/docs/css/">Sintassi CSS</a> ←</p>
+<p><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet</p>
+<p>File css non sono altro che <strong>fogli di stile a cascata</strong>, è uno dei
+linguaggi fondamentali del W3C (organizzazione che fornisce linee guida e regole
+per la specifica delle pagine), serve per <strong>associare uno stile al testo
+delle pagine</strong>, riducendo il carico del lavoro, permette inoltre di
+controllare il layout delle pagine web multiple in un colpo solo,
+possono essere separate dalla pagina html.<br>
+Pagine più leggere e facili da modificare.</p>
+<p>È un <strong>insieme di regole</strong>, ogni regola è formata da un <strong>selettore</strong>
+associato ad un blocco delle dichiarazioni, ossia delle coppie
+<strong>propietà</strong>, <strong>valore</strong>.<br>
+Selettore per i tag (tag{}), selettore per id (<code>#id{}</code>), selettore per le
+classi (.classe{})<br>
+Per inserire css <strong>esterni</strong> uso <code>&lt;link&gt;</code> nello <code>&lt;head&gt;</code>, per quelli
+<strong>interni</strong> metto tutte le regole nel tag <code>&lt;style&gt;</code>, oppure <strong>in linea</strong>
+con l’attributo <code>style=""</code>.</p>
+<p><strong>“a cascata”</strong> perché è il modo in cui vengono valutate le regole css.<br>
+Infatti lo User agent deve applicare un algoritmo per stabilire i valori
+di una combinazione di elementi e proprietà. <strong>Questa valutazione a
+cascata avviene in 4 fasi</strong>:</p>
+<ol>
+<li>Per prima cosa bisogna selezionare tutte le dichiarazioni che
+applicano a un elemento/proprietà per il media type richiesto</li>
+<li>Il primo ordinamento è fatto in base a peso e origine</li>
+<li>Il secondo ordinamento è fatto in base alla specificity</li>
+<li>Il terzo ordinamento è fatto in base all’ordine</li>
+</ol>
+<p><strong>Css box model:</strong> ossia tutti gli elementi html sono delle box, da più
+esterno al più interno abbiamo: <strong>margin</strong> area trasparente attorno al
+bordo, <strong>border</strong> un bordo che circonda padding e content , <strong>padding</strong>
+area trasparente attorno al content, il <strong>content</strong> dove risiedono testo
+e immagini.</p>
+<hr>
+<h2 id="bootstrap" tabindex="-1"><a class="anchor" href="#bootstrap" aria-hidden="true"><span class="octicon octicon-link"></span></a> Bootstrap</h2>
+<p>→ Ulteriori info nel <a href="http://getbootstrap.com/getting-started/">sito ufficiale</a> ←</p>
+<p>Bootstrap è il framework HTML, CSS e JavaScript più popolare per lo sviluppo di siti Web responsive
+e mobile-first.
+<strong>Bootstrap</strong> è un framework front-end gratuito per uno sviluppo web più
+rapido e semplice, include modelli di progettazione basati su HTML e CSS
+per molti elementi, oltre a plug-in JavaScript opzionali, inoltre ti dà
+anche la possibilità di creare facilmente <strong>design reattivi</strong>, ossia
+design che si adattano automaticamente per avere un bell’aspetto su
+tutti i dispositivi, dai piccoli telefoni ai desktop di grandi
+dimensioni.<br>
+In pratica consiste in una libreria open-source per realizzare siti web e applicazioni web
+responsive.<br>
+Per usarlo basta includere i fogli di stile e gli script.<br>
+Incorpora alcuni elementi come: <strong>grid</strong>, <strong>table</strong>, <strong>buttons</strong> e molto altro.</p>
+<p>I vantaggi dell'utilizzo di Bootstrap sono:</p>
+<ul>
+<li>Facile utilizzo</li>
+<li>Funzionalità reattive</li>
+<li>Approccio mobile-first</li>
+<li>Compatibilità con tutti i browser moderni</li>
+</ul>
+<p>Per includere Bootstrap è necessario inserire i seguenti elementi all'interno del progetto:</p>
+<p><strong>CSS</strong></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://maxcdn.bootstrapcdn.com/bootstrap/${VERSION_NUMBER}/css/bootstrap.min.css"</span>&gt;</span>
+</code></pre>
+<p><strong>JavaScript</strong></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://maxcdn.bootstrapcdn.com/bootstrap/${VERSION_NUMBER}/js/bootstrap.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p><strong>jQuery Library</strong></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>Per garantire il corretto rendering e zoom al tocco è necessario utilizzare con Bootstrap il tag
+<code>&lt;meta&gt;</code>, attraverso il codice:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;</span>
+</code></pre>
+<ul>
+<li><code>width=device-width</code> → imposta la larghezza in modo da seguire la larghezza del display del device in uso</li>
+<li><code>initial-scale=1</code> → imposta il livello di zoom iniziale quando la pagina viene caricata la
+prima volta</li>
+</ul>
+<p><strong>Info su Bootstrap</strong></p>
+<blockquote>
+<p>Se l'utente ha già visitato un sito che utilizza Bootstrap allora non verrà effettuato nuovamente
+il download, ma verrà caricato dalla cache, velocizzando i tempi di caricamento.
+Inoltre Bootstrap è creato in modo che quando un utente richieda un file, esso venga fornito dal
+server più vicino per ridurre ulteriormente i tempi di caricamento.</p>
+</blockquote>
+<hr>
+<h2 id="xml" tabindex="-1"><a class="anchor" href="#xml" aria-hidden="true"><span class="octicon octicon-link"></span></a> XML</h2>
+<p>→ <a href="https://learnxinyminutes.com/docs/xml/">Sintassi XML</a> ←</p>
+<p>E<strong>X</strong>tensible <strong>M</strong>arkup <strong>L</strong>anguage</p>
+<p>Nato dalla necessità di un nuovo e comune formato dei dati per Internet,
+necessità di regole semplici comuni e semplici da comprendere,
+capacità di definire una struttura delle informazioni per diversi
+domini, formato abbastanza formale, e leggibile.</p>
+<p><strong>XML è uno strumento per trasmettere informazioni</strong>, indipendente dalla
+piattaforma, dal software e dall’hardware.<br>
+Ossia <strong>un linguaggio di markup</strong> come HTML, dove i tag di
+XML non sono predefiniti, creato per strutturare e memorizzare e trasmettere dati.<br>
+Le informazioni sono collezionate in unità chiamate
+<strong>documento XML</strong>, il quale contiene uno o più elementi dove ogni
+elemento ha un nome, ossia all’interno dei tag abbiamo le informazioni.<br>
+<strong>XML non vuole sostituire HTML</strong> ma la tendenza è quella di rappresentare i dati con XML e mostrarli con HTML.<br>
+Infatti il solo scopo di XML è quello di strutturare, memorizzare e trasmettere i dati.<br>
+Inoltre con xml <strong>è possibile scambiare i dati fra sistemi incompatibili</strong>.</p>
+<p><strong>Sintassi</strong></p>
+<ul>
+<li>in XML è illegale omettere il tag di chiusura</li>
+<li>i nomi dei tag XML sono case-sensitive</li>
+<li>è presente l’annidamento dei tag</li>
+<li>tutti i documenti XML devono avere un nodo radice</li>
+<li>tutti gli altri elementi devono essere compresi<br>
+nell’elemento radice</li>
+<li>tutti gli elementi possono avere dei nodi figli</li>
+<li>i valori di tutti gli attributi devono essere tra doppi apici</li>
+<li>evito di usare gli attributi se possibili li uso solo per le
+istruzioni di controllo</li>
+</ul>
+<pre><code class="language-xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">event</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">date</span>&gt;</span>20 Settembre 2023<span class="hljs-tag">&lt;/<span class="hljs-name">date</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">priority</span>&gt;</span>High<span class="hljs-tag">&lt;/<span class="hljs-name">priority</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Esame Tecnologie e Linguaggi Web<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">note</span>&gt;</span>Presentazione e discussione orale del progetto<span class="hljs-tag">&lt;/<span class="hljs-name">note</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>https://ariel.unimi.it<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">event</span>&gt;</span>
+</code></pre>
+<p><strong>Validazione XML</strong> e <strong>DTD</strong></p>
+<p>Un documento XML sintatticamente corretto è detto <strong>ben formato</strong>.<br>
+Un documento XML che rispetta uno schema (o un DTD) è detto <strong>valido</strong>.<br>
+Per leggere, modificare o creare un documento XML è necessario un
+<strong>parser XML</strong> (js con <code>DOMParser()</code>).</p>
+<hr>
+<h2 id="json" tabindex="-1"><a class="anchor" href="#json" aria-hidden="true"><span class="octicon octicon-link"></span></a> JSON</h2>
+<p>→ <a href="https://learnxinyminutes.com/docs/json/">Sintassi JSON</a> ←</p>
+<p><strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation</p>
+<p>È un <strong>text-based open standard</strong> leggero disegnato per lo scambio di dati human-readable.<br>
+Usato quando si scrivono applicazioni basate su JavaScript (include estensioni al browser e siti web);<br>
+sopratutto usato per <strong>trasmettere dati tra server e applicazioni web</strong> (servizi <strong>API</strong>).<br>
+Facile da usare da leggere e scrivere, molto leggero, ed indipendente dal linguaggio.</p>
+<p>La sintassi JSON è considerata come un sottoinsieme della <strong>sintassi JavaScript</strong>,<br>
+infatti dati rappresentati come coppia chiave, valore, le parentesi graffe contengono oggetti,<br>
+le parentesi quadre definiscono array.</p>
+<p><strong>Esempio JSON</strong></p>
+<pre><code class="language-json">{
+   <span class="hljs-attr">"exams"</span>:[
+      {
+         <span class="hljs-attr">"id"</span>: <span class="hljs-string">"01"</span>,
+         <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Tecnologie e Linguaggi Web"</span>,
+         <span class="hljs-attr">"teacher"</span>: <span class="hljs-string">"V.B."</span>,
+         <span class="hljs-attr">"year"</span>: <span class="hljs-number">3</span>,
+         <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://ariel.unimi.it/tlw"</span>,
+      },
+      {
+         <span class="hljs-attr">"id"</span>: <span class="hljs-string">"02"</span>,
+         <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Programmazione II"</span>,
+         <span class="hljs-attr">"teacher"</span>: <span class="hljs-string">"M.S."</span>,
+         <span class="hljs-attr">"year"</span>: <span class="hljs-number">2</span>,
+         <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://ariel.unimi.it/prog2"</span>,
+      }
+   ]
+} 
+</code></pre>
+<blockquote>
+<p>I <strong>tipi di dato</strong> supportati da JSON sono:<br>
+<em>Number</em>, <em>String</em>, <em>Boolean</em>, <em>Array</em>, <em>Value</em>, <em>Object</em> (<strong>key</strong>:<strong>value</strong>), <em>Whitespace</em>, <em>null</em></p>
+</blockquote>
+<p>JSON Schema<br>
+È una specifica per la definizione dei dati JSON, serve<br>
+per validare JSON, con diverse librerie per i vari linguaggi (validatore più valido →
+<strong>JVS</strong>)</p>
+<blockquote>
+<p>Altre <a href="https://json.org">info</a> di JSON e implementazioni nei vari linguaggi.</p>
+</blockquote>
+<h2 id="json-vs-xml" tabindex="-1"><a class="anchor" href="#json-vs-xml" aria-hidden="true"><span class="octicon octicon-link"></span></a> JSON Vs XML</h2>
+<p><strong>JSON</strong> è simile a XML ma <strong>più leggero</strong>.<br>
+Sono entrambi formati human readable e indipendenti dal linguaggio.<br>
+Ogni valore in XML richiede apertura e chiusura di un tag, in <strong>JSON
+solo il valore</strong>.</p>
+<p>Si possono confrontare su 3 fattori:</p>
+<ol>
+<li><strong>verbosità</strong>: xml più verboso di JSON che è più veloce da
+scrivere</li>
+<li><strong>utilizzo degli array</strong>: xml usato per dati strutturali che non
+contengono array, invece json li include</li>
+<li><strong>parsing</strong>: in JS molto semplice parsare json
+(<code>JSON.parse or JSON.stringify</code>), chiunque può parsare XML</li>
+</ol>
+<hr>
+<h2 id="rest" tabindex="-1"><a class="anchor" href="#rest" aria-hidden="true"><span class="octicon octicon-link"></span></a> REST</h2>
+<p><strong>REST</strong> → <strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer</p>
+<ul>
+<li>Gestisce un tipo di contenuto variabile che può essere XML, ma principalmente JSON.</li>
+<li><strong>è un’astrazione di elementi architetturali</strong> in un sistema
+hypermedia distribuito</li>
+<li><strong>ignora i dettagli implementativi</strong> dei componenti e la <strong>sintassi
+dei protocolli</strong></li>
+<li>si focalizza sul ruolo dei componenti</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Data Element</th>
+<th style="text-align:center">Modern Web Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">resource</td>
+<td style="text-align:center">conceptual target of hypertext reference</td>
+</tr>
+<tr>
+<td style="text-align:center">resource identifier</td>
+<td style="text-align:center">URL, URN (<strong>U</strong>nified <strong>R</strong>esource <strong>N</strong>ame)</td>
+</tr>
+<tr>
+<td style="text-align:center">representation</td>
+<td style="text-align:center">HTML document, JPEG image</td>
+</tr>
+<tr>
+<td style="text-align:center">representation metadata</td>
+<td style="text-align:center">media type, last-modified time</td>
+</tr>
+<tr>
+<td style="text-align:center">resource metadata</td>
+<td style="text-align:center">source link, alternates, vary</td>
+</tr>
+<tr>
+<td style="text-align:center">control data</td>
+<td style="text-align:center">if-modified-since, cache-control</td>
+</tr>
+</tbody>
+</table>
+<p>La natura e lo stato dei <strong>data element</strong> è un aspetto essenziale di
+REST, le componenti REST trasferiscono una risorsa usando una delle
+rappresentazioni standard.<br>
+Ogni <strong>resource</strong> è una membership function che al tempo t viene
+associata a un set di entità/valori.</p>
+<p><strong>Resource identifier</strong><br>
+<small>l’autore sceglie l’identificatore, due uri possono puntare alla stessa risorsa.</small></p>
+<p><strong>Addressability</strong><br>
+<small>una applicazione è indirizzabile se espone i suoi
+dati come risorse, espone un uri per ogni info di interesse.</small></p>
+<p><strong>Statelessness</strong><br>
+<small>ogni richiesta HTTP è eseguita in isolation, infatti
+il server non usa informazioni da richieste precedenti, il client
+inserisce tutto ciò che è necessario a soddisfare la richiesta, lo stato
+renderebbe le richieste molto più semplici ma la gestione del client
+molto più complicata.</small></p>
+<p><strong>Representation</strong><br>
+<small>usata per ottenere lo stato di una risorsa,
+trasferita tra i componenti, sequenza di dati più byte che la
+descrivono, il client sceglie la rappresentazione, e il server sceglie
+la rappresentazione in base allo header della richiesta (xml, json
+etc…).</small></p>
+<p><strong>Uniform Interface per tutte le risorse</strong> interfaccia comune</p>
+<ul>
+<li><code>GET</code> ottiene una rappresentazione della risorsa</li>
+<li><code>POST</code> crea una nuova risorsa</li>
+<li><code>PUT</code> crea o aggiorna una risorsa</li>
+<li><code>DELETE</code> cancella una risorsa</li>
+</ul>
+<p><strong>Uniform Interface Principle</strong>: <strong>CRUD</strong> example</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>CRUD</strong></th>
+<th style="text-align:center"><strong>REST</strong></th>
+<th style="text-align:center"><em>action</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>C</strong>REATE</td>
+<td style="text-align:center"><strong>P</strong>OST</td>
+<td style="text-align:center"><em>create a sub resource</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>R</strong>EAD</td>
+<td style="text-align:center"><strong>G</strong>ET</td>
+<td style="text-align:center"><em>retrieve the current state of the resource</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>U</strong>PDATE</td>
+<td style="text-align:center"><strong>P</strong>UT</td>
+<td style="text-align:center"><em>initialize or update the state of a resource at the given URI</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>D</strong>ELETE</td>
+<td style="text-align:center"><strong>D</strong>ELETE</td>
+<td style="text-align:center"><em>clear a resource, after the URI is no longer valid</em></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><code>POST</code> è usata per creare risorse subordinate, <code>PUT</code> per creare/modificare risorse<br>
+Con la <strong>PUT</strong> il client decide il nome della risorsa, con la <strong>POST</strong> lo decide il server.</p>
+</blockquote>
+<p><strong>RESTful-Services</strong></p>
+<p>Un servizio basato su REST è chiamato <strong>RESTful service</strong>, <strong>REST non
+dipende da nessun protocollo</strong>, anche se quasi tutti i RESTful service
+usano HTTP.<br>
+<strong>Visione astratta REST client:</strong></p>
+<ul>
+<li>definisco le info da aggiungere alla HTTP request (header, body,
+method, uri)</li>
+<li>creare l’HTTP request e mandarla al server HTTP</li>
+<li>parsare la risposta e fornire le info al codice REST</li>
+</ul>
+<p>Il client usa XMl parser per interpretare la risposta, client REST
+possono essere sviluppati in molti linguaggi (js).</p>
+<p><strong>Visione astratta REST server:</strong></p>
+<ul>
+<li><strong>accettare</strong> la HTTP request</li>
+<li><strong>parsare</strong> la HTTP request ed estrarre le info importanti</li>
+<li><strong>spedire</strong> la risposta al client</li>
+</ul>
+<p>REST accede ai dati usando <strong>URI</strong>.<br>
+<strong>Safety</strong>: richieste di sola lettura che non causano danni (GET, HEAD).<br>
+<strong>Idempotenza</strong>: L’esecuzione di un commando una o più volte ha lo
+stesso effetto (GET, HEAD, PUT, DELETE).</p>
+<hr>
+<h2 id="javascript" tabindex="-1"><a class="anchor" href="#javascript" aria-hidden="true"><span class="octicon octicon-link"></span></a> JavaScript</h2>
+<p>→ <a href="https://learnxinyminutes.com/docs/javascript">Sintassi JavaScript</a> ←</p>
+<p><strong>Linguaggio di scripting</strong>, tipo particolare di linguaggio di
+programmazione, utilizzato appunto per scrivere <strong>script</strong>.</p>
+<blockquote>
+<p><strong>Script</strong>:  È un programma che inseriamo nella pagina web</p>
+</blockquote>
+<ul>
+<li>È formato da un insieme di istruzioni, essenziale per la visualizzazione di
+<strong>pagine web dinamiche</strong>, ossia pagine web dove il contenuto viene
+generato al momento della richiesta/visualizzazione</li>
+<li>È un <strong>linguaggio lato client</strong>: viene elaborato tramite il <strong>client</strong> (browser), senza
+la necessità di un server per poter visualizzare la pagina</li>
+<li>È un <strong>linguaggio interpretato</strong>, ossia che il sorgente non deve essere
+compilato per essere eseguito, inoltre l’interprete di JS è contenuto all’interno del browser.</li>
+</ul>
+<p>JavaScript inoltre è:</p>
+<ul>
+<li>case-sensitive</li>
+<li>weak-typed</li>
+<li>event-driven</li>
+<li>Object-based language</li>
+</ul>
+<p>Il codice JS può essere incluso in un tag <code>&lt;script&gt;codice JavaScript&lt;/script&gt;</code>, oppure<br>
+semplicemente indicando il percorso del file JS <code>&lt;script src="path_to_file.js"&gt;&lt;/script&gt;</code></p>
+<p>Possibilità di accesso agli oggetti tramite <strong>nodi</strong> (<em>ex</em>: aggiungo con <code>appendChild()</code>)</p>
+<p><strong>Oggetti JS</strong>: è una collezione di dati dotata di nome, posso accedere
+alle sue propietà con la <strong>dot-notation</strong>, oggetto JS costruito tramite costruttore.</p>
+<h3 id="variabili-e-scope" tabindex="-1"><a class="anchor" href="#variabili-e-scope" aria-hidden="true"><span class="octicon octicon-link"></span></a> Variabili e Scope</h3>
+<p>Scope:</p>
+<ul>
+<li><strong>Globale</strong> → per le variabili definite fuori da funzioni</li>
+<li><strong>Locale</strong> → per le variabili definite esplicitamente all'interno di funzioni</li>
+</ul>
+<blockquote>
+<p><span style="color: red;">ATTENZIONE</span> un blocco NON delimita uno scope!</p>
+<pre><code class="language-javascript">x = <span class="hljs-string">'3'</span> + <span class="hljs-number">2</span>; <span class="hljs-comment">// string "32"</span>
+{
+ { x = <span class="hljs-number">5</span> }    <span class="hljs-comment">// internal block</span>
+ y = x + <span class="hljs-number">3</span>;  <span class="hljs-comment">// x = 5 and not "323" -&gt; y = 8</span>
+}
+</code></pre>
+</blockquote>
+<h3 id="dom" tabindex="-1"><a class="anchor" href="#dom" aria-hidden="true"><span class="octicon octicon-link"></span></a> DOM</h3>
+<p><strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel</p>
+<p>È uno dei concetti chiave di <em>JS</em>, è uno standard di W3C, costituito da tre parti:</p>
+<ul>
+<li><strong>Core DOM</strong>: <small>modello standard per tutti i tipi di documenti</small></li>
+<li><strong>XML DOM</strong>: <small>modello standard per documenti XML</small></li>
+<li><a href="#html-dom"><strong>HTML DOM</strong></a>: <small>modello standard per documenti HTML</small></li>
+</ul>
+<h4 id="html-dom" tabindex="-1"><a class="anchor" href="#html-dom" aria-hidden="true"><span class="octicon octicon-link"></span></a> HTML DOM</h4>
+<p>Definisce uno standard su come come ottenere, cambiare, aggiungere o modificare elementi HTML.<br>
+JavaScript usa <strong>HTML DOM</strong> per modificare tutti gli elementi di una pagina web.<br>
+In pratica definisce ogni elemento HTML come oggetto, che ha delle proprietà e dei metodi per<br>
+accedervi, oltre a creare degli <a href="#eventi">eventi</a> per gli elementi stessi.</p>
+<blockquote>
+<p>quando una pagina è caricata il browser crea il DOM della pagina, generato secondo una gerarchia.</p>
+</blockquote>
+<p>Tra gli oggetti del DOM ho:</p>
+<ul>
+<li><code>window</code> che è la finestra corrente del browser
+<ul>
+<li><code>document</code> il contenuto della finestra</li>
+<li><code>navigator</code> oggetto relativo al browser</li>
+<li><code>location</code> oggetto relativo alle informazioni sull'indirizzo della risorsa, il percorso etc...</li>
+<li><code>history</code> oggetto relativo alla navigazione delle pagine (avanti/indietro)</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><em>Come accedo agli elementi della pagina attraverso id?</em> <code>document.getElementByID(id)</code></p>
+</blockquote>
+<h3 id="eventi" tabindex="-1"><a class="anchor" href="#eventi" aria-hidden="true"><span class="octicon octicon-link"></span></a> Eventi</h3>
+<p>I programmi JavaScript sono tipicamente “guidati dagli eventi” (<strong>event-driven</strong>).<br>
+Gli eventi sono scatenati da azioni dell’utente sulla pagina Web.<br>
+Un programma JavaScript deve contenere un gestore di eventi (<strong>event handler</strong>),<br>
+che sia in grado di ricevere e interpretare le azioni dell’utente (eventi).<br>
+<strong>Il DOM fornisce una serie di gestori di eventi predefiniti.</strong><br>
+Per esempio evento di <code>onClick</code>, <code>onLoad</code>, <code>onMouseOver</code>, inoltre questi
+eventi possono chiamare funzioni JS che raccolgono i dati dal form.</p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- L'utente fa click (onClick) sul link &lt;a ..&gt; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">"window.print()"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- L'utente invia (onSubmit) il modulo &lt;form ..&gt; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"module"</span> <span class="hljs-attr">onSubmit</span>=<span class="hljs-string">"alert('Sent!');"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- L'utente porta il cursore (onFocus) nel campo di testo &lt;input ..&gt; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"login"</span> <span class="hljs-attr">onFocus</span>=<span class="hljs-string">"js_action();"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- L'utente carica (onLoad) la pagina &lt;body ..&gt; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">onLoad</span>=<span class="hljs-string">"alert('Loaded!');"</span>&gt;</span>
+</code></pre>
+<h3 id="promises" tabindex="-1"><a class="anchor" href="#promises" aria-hidden="true"><span class="octicon octicon-link"></span></a> Promises</h3>
+<p>Una <strong>promise</strong> è un particolare oggetto che connette il <strong>codice
+produttore</strong>, una qualsiasi operazione che richiede tempo (<em>come il download di file da server</em>),<br>
+con il <strong>codice consumatore</strong>; cioè un operazione che necessita del risultato
+del codice produttore, rendendo il risultato disponibile al consumatore
+quando il codice produttore è terminato.</p>
+<pre><code class="language-javascript"> <span class="hljs-keyword">let</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+     <span class="hljs-comment">// codice produttore</span>
+ });
+</code></pre>
+<p>I due argomenti della funzione sono delle callback che vengono eseguite
+quando la promise è risolta o rifiutata:</p>
+<ul>
+<li><strong>resolve(value)</strong> - se il processo termina correttamente con il valore passato come parametro</li>
+<li><strong>reject(reason)</strong> - se il processo termina con un errore</li>
+</ul>
+<p>L'oggetto <strong>Promise</strong> ha due <em>proprietà interne</em>:</p>
+<ul>
+<li><strong>state</strong>
+<ul>
+<li><strong>pending</strong> <small>stato iniziale</small></li>
+<li><strong>fulfilled</strong> <small>se viene invocato resolve</small></li>
+<li><strong>rejected</strong> <small>se viene invocato reject</small></li>
+</ul>
+</li>
+<li><strong>result</strong>
+<ul>
+<li><strong>undefined</strong> <small>stato iniziale</small></li>
+<li><strong>value</strong> <small>se viene invocato resolve</small></li>
+<li><strong>error</strong> <small>se viene invocato reject</small></li>
+</ul>
+</li>
+</ul>
+<p><strong>Esempio di utilizzo</strong></p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+   <span class="hljs-comment">// dopo 1 secondo segnala che l'istruzione ha avuto successo</span>
+   <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> resolve(<span class="hljs-string">"done!"</span>), <span class="hljs-number">1000</span>);
+})
+
+<span class="hljs-comment">// utilizzo della promise</span>
+promise.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">valore</span>) </span>{ alert(valore) });
+
+<span class="hljs-comment">// versione compatta</span>
+promise.then(<span class="hljs-function"><span class="hljs-params">valore</span> =&gt;</span> alert(valore));
+  
+</code></pre>
+<h3 id="fetch" tabindex="-1"><a class="anchor" href="#fetch" aria-hidden="true"><span class="octicon octicon-link"></span></a> Fetch</h3>
+<p>JavaScript può <strong>inviare richieste di rete al server</strong> e caricare nuove informazioni
+ogni volta che è necessario.<br>
+Il metodo <code>fetch()</code> è tra tutti il più moderno e versatile.<br>
+Sintassi di base: <code>var promise = fetch(url, [options])</code>, senza options
+è una GET, la funzione restituisce una <a href="#promises">promise</a> che verrà gestita
+come precedentemente detto, oppure con <code>await</code>.<br>
+Posso anche specificare un method diverso ad esempio POST con anche il
+body.</p>
+<p>Ottenere una riposta avviene in due fasi:</p>
+<ul>
+<li>
+<p><strong>Valutazione dello stato</strong></p>
+<pre><code class="language-javascript"><span class="hljs-keyword">let</span> response = <span class="hljs-keyword">await</span> fetch(url);
+<span class="hljs-keyword">if</span> (response.ok) { <span class="hljs-comment">// se HTTP-status è 200..299</span>
+   <span class="hljs-keyword">var</span> json = <span class="hljs-keyword">await</span> response.json();
+} <span class="hljs-keyword">else</span> {
+   alert(<span class="hljs-string">"HTTP-ERROR: "</span> + response.status);
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Risposta</strong><br>
+<small>fornisce diversi metodi per accedere al body in formati differenti</small></p>
+<ul>
+<li><code>response.text()</code> <small>legge la risposta e restituisce un testo</small></li>
+<li><code>response.json()</code> <small>interpreta la risposta e restituisce la response come JSON</small></li>
+<li><code>response.formData()</code> <small>restituisce la response come oggetto FormData</small></li>
+<li><code>response.blob()</code> <small>restituisce la response come Blob (binary large object), dato binario
+con type</small></li>
+</ul>
+<pre><code class="language-javascript">fetch(<span class="hljs-string">"https://server.com/api/movie/"</span>)
+   .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
+   .then(<span class="hljs-function"><span class="hljs-params">results</span> =&gt;</span> alert(results.results[<span class="hljs-number">0</span>].title())
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>Per eseguire una richiesta <code>POST</code> o con un altro metodo, utilizziamo le opzioni di <a href="#fetch">fetch</a></p>
+</blockquote>
+<pre><code class="language-javascript"><span class="hljs-keyword">let</span> user = { <span class="hljs-attr">nickname</span>: <span class="hljs-string">"K"</span>, <span class="hljs-attr">id</span>: <span class="hljs-string">"01"</span> }
+<span class="hljs-comment">// var promise = fetch(url, [opts])</span>
+<span class="hljs-keyword">var</span> response = <span class="hljs-keyword">await</span> fetch(<span class="hljs-string">"server/path"</span>, {
+   <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+   <span class="hljs-attr">headers</span>: { <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json;charset=utf-8'</span> },
+   <span class="hljs-attr">body</span>: <span class="hljs-built_in">JSON</span>.stringify(user)
+})
+</code></pre>
+<hr>
+<h2 id="nodejs" tabindex="-1"><a class="anchor" href="#nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a> NodeJS</h2>
+<p><a href="https://nodejs.org/en/docs">Node.js</a> è un ambiente <a href="#javascript">JavaScript</a> multipiattaforma <strong>lato server</strong>,
+basato su motore JS, inoltre fornisce moduli per interagire con le
+risorse del sistema.<br>
+I programmi Node.js possono essere creati utilizzando file JavaScript
+che devono essere eseguiti tramite Node.js.</p>
+<p>Semplice script Node, in file <code>app.js</code></p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>);
+
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">'127.0.0.1'</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+
+<span class="hljs-keyword">const</span> server = http.createServer(<span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
+  res.statusCode = <span class="hljs-number">200</span>;
+  res.setHeader(<span class="hljs-string">'Content-Type'</span>, <span class="hljs-string">'text/plain'</span>);
+  res.end(<span class="hljs-string">'Hello World'</span>);
+});
+
+server.listen(port, hostname, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Server running at http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>/`</span>);
+}); 
+</code></pre>
+<p>Nella Shell</p>
+<pre><code class="language-bash">node app.js
+<span class="hljs-comment"># open browser at location:</span>
+{open,xdg-open} http://localhost:3000  
+</code></pre>
+<h3 id="npm" tabindex="-1"><a class="anchor" href="#npm" aria-hidden="true"><span class="octicon octicon-link"></span></a> NPM</h3>
+<p><a href="https://www.npmjs.com/">NPM</a> → <strong>N</strong>ode.js <strong>P</strong>ackage <strong>M</strong>anager<br>
+È il gestore dei pacchetti di <a href="#nodejs">NodeJS</a>; fornisce un repository pubblico di pacchetti,
+uno strumento a riga di comando per lavorare con i pacchetti.</p>
+<p>I pacchetti possono essere installati a livello <strong>globale</strong> (accessibili da tutto il sistema),<br>
+oppure a livello <strong>locale</strong>, memorizzati nella cartella selezionata nella sottocartella
+<code>node_modules</code> e disponibili esclusivamente al progetto residente in quella cartella.</p>
+<p><strong>Comandi Principali NPM</strong></p>
+<pre><code class="language-bash"><span class="hljs-comment"># Inizializza e configura node per la cartella dove viene eseguito</span>
+<span class="hljs-comment"># creando anche il file &lt;package.json&gt; che contiene metadati e info sul progetto oltre </span>
+<span class="hljs-comment"># a dipendenze dell'applicazione e utili per lo sviluppo</span>
+npm init
+
+<span class="hljs-comment"># installa il pacchetto 'express' a livello globale</span>
+npm install --global express
+<span class="hljs-comment"># installa il pacchetto 'express' a livello locale</span>
+npm install express
+<span class="hljs-comment"># installa il pacchetto 'express' a livello locale identificandolo come dipendenza della</span>
+<span class="hljs-comment"># applicazione (flag '-S' o '--save')</span>
+npm install -S express
+<span class="hljs-comment"># installa il pacchetto 'express' a livello locale identificandolo come dipendenza dello</span>
+<span class="hljs-comment"># sviluppatore (flag '-D' o '--save-dev')</span>
+npm install -D express
+<span class="hljs-comment"># rimuove il pacchetto 'express'</span>
+npm uninstall express
+</code></pre>
+<hr>
+<h2 id="swaggerjs" tabindex="-1"><a class="anchor" href="#swaggerjs" aria-hidden="true"><span class="octicon octicon-link"></span></a> SwaggerJS</h2>
+<p><a href="https://swagger.io/solutions/api-documentation/">Swagger</a> ti consente di descrivere la struttura delle <code>API</code> in modo che le macchine possano leggerle.<br>
+In pratica è un <em>tool</em> utile per la creazione della documentazione delle API di un progetto e del<br>
+loro utilizzo.<br>
+A seconda dell'applicazione, lo swagger consiste in un file di testo (con formato JSON o YAML).<br>
+L'interfaccia utente per semplificare la documentazione è basata su HTML e JavaScript.</p>
+<blockquote>
+<p>Per lo sviluppo delle API è essenziale una documentazione adeguata e comprensibile.<br>
+Senza la documentazione è difficile per gli sviluppatori, utilizzare le interfacce.<br>
+Ciò è vero soprattutto per le API di dominio pubblico!</p>
+</blockquote>
+<p>Utilizzare Swagger è attualmente il modo migliore per documentare le <strong>API REST</strong>,<br>
+poiché è in grado di mappare quasi tutti i servizi web e le informazioni relative all’interfaccia.<br>
+Swagger evolve con il sistema e tutte le modifiche apportate vengono documentate automaticamente.</p>
+<p>È possibile utilizzarlo con il pacchetto <code>express</code> attraverso l'apposito <a href="https://www.npmjs.com/package/swagger-ui-express">modulo</a> disponibile tramite
+<a href="#npm">npm</a>.</p>
+<p><strong>Esempio utilizzo</strong></p>
+<pre><code class="language-javascript"><span class="hljs-comment">// installare prima il pacchetto tramite comando shell</span>
+<span class="hljs-comment">//   npm install swagger-ui-express</span>
+
+<span class="hljs-comment">// nel file app.js</span>
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);
+<span class="hljs-keyword">const</span> app = express();
+<span class="hljs-keyword">const</span> swaggerUi = <span class="hljs-built_in">require</span>(<span class="hljs-string">'swagger-ui-express'</span>);
+<span class="hljs-keyword">const</span> swaggerDocument = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./swagger.json'</span>);
+
+app.use(<span class="hljs-string">'/api-docs'</span>, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+</code></pre>
+<hr>
+<h2 id="mongodb" tabindex="-1"><a class="anchor" href="#mongodb" aria-hidden="true"><span class="octicon octicon-link"></span></a> MongoDB</h2>
+<p>→ <a href="https://learnxinyminutes.com/docs/mongodb">Sintassi Mongo</a> ←</p>
+<p>→ <a href="https://www.mongodb.com/docs/">Docs</a> ←</p>
+<p>È un database open source (scritto in <em>C++</em>) <strong>NoSql senza schema</strong>, composto da
+collezione di documenti.<br>
+Utilizza <a href="https://bsonspec.org">BSON</a>, “<strong>B</strong>inary J<strong>SON</strong>”, al posto di JSON che permette un pò più di dati
+rispetto a JSON in forma di campo e valore con possibilità di usare
+delle chiavi esterne, la struttura incorporata riduce la necessità di
+join.</p>
+<ul>
+<li>Una <strong>collezione</strong> è un insieme di <strong>documenti</strong> di uno stesso tipo</li>
+<li>Può archiviare qualsiasi tipo di dati con qualsiasi dimensione</li>
+<li>Utilizza la RAM per archiviare i dati, questo consente un accesso più rapido ai dati</li>
+<li>È conveniente perché riduce i costi su hardware e archiviazione</li>
+<li>Supporta l'elaborazione di <strong>query</strong> ad-hoc</li>
+</ul>
+<p><strong>MongoDB Data Model</strong>: è document-based (max <em>16MB</em>), documenti in formato BSON, ogni documento è archiviato in una collezione.</p>
+<p><strong>MongoDB vs. SQL</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>MongoDB</strong></th>
+<th style="text-align:center"><strong>SQL</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Document</td>
+<td style="text-align:center">Tuple</td>
+</tr>
+<tr>
+<td style="text-align:center">Collection</td>
+<td style="text-align:center">Table/View</td>
+</tr>
+<tr>
+<td style="text-align:center">PK: _id Field</td>
+<td style="text-align:center">PK: Any Attribute(s)</td>
+</tr>
+<tr>
+<td style="text-align:center">Uniformity not Required</td>
+<td style="text-align:center">Uniform Relation Schema</td>
+</tr>
+<tr>
+<td style="text-align:center">Index</td>
+<td style="text-align:center">Index</td>
+</tr>
+<tr>
+<td style="text-align:center">Embedded Structure</td>
+<td style="text-align:center">Joins</td>
+</tr>
+<tr>
+<td style="text-align:center">Shard</td>
+<td style="text-align:center">Partition</td>
+</tr>
+</tbody>
+</table>
+<p>Altre proprietà di MongoDB:</p>
+<ul>
+<li>È facile da installare, utilizzare → database senza schema</li>
+<li>database senza schema → il codice che creiamo definisce lo schema</li>
+<li>può archiviare qualsiasi tipo di dato con qualsiasi dimensione</li>
+<li>i dati sono archiviati in BSON (key:value), non sono necessari <strong>join</strong> complessi</li>
+<li>può essere replicato e utilizzato su più host</li>
+<li>supporta la proprietà <strong>ACID</strong> (<strong>a</strong>tomicità, <strong>c</strong>oerenza, <strong>i</strong>solamento, <strong>d</strong>urata)<br>
+per una transazione del database</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>CRUD</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>C</strong>reate</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>R</strong>ead</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>U</strong>pdate</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>D</strong>elete</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CRUD</strong> permette di inserire dati nel database usando la <strong>shell</strong></p>
+<pre><code class="language-bash">show dbs/collection
+use DB_NAME
+db.DB_NAME <span class="hljs-comment"># crea un db di nome DB_NAME</span>
+<span class="hljs-comment"># db.&lt;collection/db&gt;.insert(&lt;document/instance&gt;)</span>
+db.City.insertOne({<span class="hljs-string">"name"</span>:<span class="hljs-string">"Milan"</span>,<span class="hljs-string">"state"</span>:<span class="hljs-string">"Italy"</span>})
+db.Name.insertMany([{},{}])
+</code></pre>
+<p><em>Considerazioni su Mongo</em></p>
+<blockquote>
+<p>database <strong>affidabile</strong>, raccomandato durante la progettazione di un app Web<br>
+<strong>scalabile</strong> che permette di creare database di grandi dimensioni per archiviare grandi quantità<br>
+di dati, anche di grandi dimensioni, non strutturati.<br>
+È utile per chi cerca un database che abbia un ottima disponibilità, elaborazione rapida,<br>
+<strong>buon backup</strong>, nessuna perdita di informazioni e oltretutto sia gratuito.</p>
+</blockquote>
+<hr>
+<h2 id="downloads" tabindex="-1"><a class="anchor" href="#downloads" aria-hidden="true"><span class="octicon octicon-link"></span></a> Downloads</h2>
+<ul>
+<li><a href="./README.md" download="">File Markdown</a></li>
+<li><a href="./pdf/README.pdf" download="">File PDF</a></li>
+<li><a href="./pdf/README.html" download="">File HTML</a></li>
+</ul>
+<hr>
+<p><a href="#" style="float:right;">Return to Top</a></p>
+
+		</main>
+	</body>
+</html>
